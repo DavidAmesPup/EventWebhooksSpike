@@ -1,0 +1,1 @@
+{  "profiles": {    "EventWebHooks.MockEventGenerator": {      "commandName": "Project",      "environmentVariables": {        "ASPNETCORE_ENVIRONMENT": "Development"      }    }  }}
