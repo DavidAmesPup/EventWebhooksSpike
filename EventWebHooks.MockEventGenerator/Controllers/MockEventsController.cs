@@ -1,4 +1,5 @@
 using EventWebHooks.MockEventGenerator.Models;
+using EventWebHooks.MockEventGenerator.Services;
 using Faker;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -8,11 +9,14 @@ namespace EventWebHooks.MockEventGenerator.Controllers
     [Route("api/[controller]")]
     public class MockEventsController : Controller
     {
+        private readonly EventServices _eventServices;
         private readonly ILogger _logger;
 
-        public MockEventsController(ILogger<MockEventsController> logger)
+        public MockEventsController(ILogger<MockEventsController> logger,
+                                    EventServices eventServices)
         {
             _logger = logger;
+            _eventServices = eventServices;
         }
 
 
