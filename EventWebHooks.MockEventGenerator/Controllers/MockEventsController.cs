@@ -32,8 +32,7 @@ namespace EventWebHooks.MockEventGenerator.Controllers
                 Position = Company.CatchPhrase()
             };
 
-            _logger.LogInformation("Received event on employee created");
-
+           
             return PostApplicationReceived(applicationReceived);
         }
 
@@ -59,6 +58,8 @@ namespace EventWebHooks.MockEventGenerator.Controllers
         {
             _logger.LogInformation("Received event on employee created");
 
+            _eventServices.Publish(eventModel);
+
             return Ok();
         }
 
@@ -67,6 +68,7 @@ namespace EventWebHooks.MockEventGenerator.Controllers
         {
             _logger.LogInformation("Received event on application received created");
 
+            _eventServices.Publish(eventModel);
             return Ok();
         }
     }

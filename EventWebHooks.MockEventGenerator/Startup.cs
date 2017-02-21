@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EventWebHooks.MockEventGenerator.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -40,7 +41,7 @@ namespace EventWebHooks.MockEventGenerator
             });
             // Pull in any SDK configuration from Configuration object
             services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
-
+            services.AddTransient<EventServices>();
             // Add S3 to the ASP.NET Core dependency injection framework.
             services.AddAWSService<Amazon.S3.IAmazonS3>();
         }

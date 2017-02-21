@@ -22,7 +22,15 @@
   },
 
   "Resources" : {
-
+  "MySNSTopic" : {
+    "Type" : "AWS::SNS::Topic",
+    "Properties" : {
+        "Subscription" : [ {
+            "Endpoint" : "davidames76@gmail.com",
+            "Protocol" : "email"
+        } ]
+    }
+},
     "Get" : {
       "Type" : "AWS::Serverless::Function",
       "Properties": {
