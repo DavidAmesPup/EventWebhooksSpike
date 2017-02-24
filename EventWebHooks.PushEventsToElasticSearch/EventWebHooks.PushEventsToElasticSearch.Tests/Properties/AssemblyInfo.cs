@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("EventWebHooks.MockEventGenerator")]
+[assembly: AssemblyTitle("EventWebHooks.PushEventsToElasticSearch.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EventWebHooks.MockEventGenerator")]
+[assembly: AssemblyProduct("EventWebHooks.PushEventsToElasticSearch.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("9289b9f0-8410-4fae-9641-6621f7470eaa")]
+[assembly: Guid("b9c815a2-99ab-47b0-8e1e-e0ce567ca527")]
 
 // Version information for an assembly consists of the following four values:
 //

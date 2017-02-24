@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace EventWebHooks.MockEventGenerator.Models
+﻿namespace EventWebHooks.MockEventGenerator.Events
 {
     public class ApplicationReceived
     {

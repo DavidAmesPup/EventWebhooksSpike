@@ -1,4 +1,4 @@
-using EventWebHooks.MockEventGenerator.Models;
+using EventWebHooks.MockEventGenerator.Events;
 using EventWebHooks.MockEventGenerator.Services;
 using Faker;
 using Microsoft.AspNetCore.Mvc;
@@ -60,7 +60,7 @@ namespace EventWebHooks.MockEventGenerator.Controllers
 
             _eventServices.Publish(eventModel);
 
-            return Ok();
+            return Ok(eventModel);
         }
 
         [HttpPost("/ApplicationReceived")]
@@ -69,7 +69,7 @@ namespace EventWebHooks.MockEventGenerator.Controllers
             _logger.LogInformation("Received event on application received created");
 
             _eventServices.Publish(eventModel);
-            return Ok();
+            return Ok(eventModel);
         }
     }
 }

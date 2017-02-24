@@ -1,7 +1,7 @@
 ﻿using Amazon.SimpleNotificationService;
 using Amazon.SimpleNotificationService.Model;
 using EventWebHooks.MockEventGenerator.Controllers;
-using EventWebHooks.MockEventGenerator.Models;
+using EventWebHooks.MockEventGenerator.Events;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
